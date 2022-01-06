@@ -16,16 +16,16 @@ let player2 = prompt("PLAYER 2: ");
 const systemTossNumber = Math.floor(Math.random(0, 1) * 2);
 let systemToss = "Tails";
 if (systemTossNumber === 0) {
-  systemToss = "Tails";
+  systemToss = "tails";
 } else {
-  systemToss = "Heads";
+  systemToss = "heads";
 }
 
 let toss = prompt("Toss: (Tails or Heads)");
 let firstPlayer = player1;
 let secondPlayer = player2;
 
-if (toss === systemToss) {
+if (toss.toLowerCase() === systemToss) {
   alert(`Congratulations! ${player1} won the toss.`);
   firstPlayer = player1;
   secondPlayer = player2;
@@ -55,7 +55,8 @@ const winner = (firstPlayerCount, secondPlayerCount) => {
 const number1 = Math.floor(Math.random(0, 1) * 100);
 const number2 = Math.floor(Math.random(0, 1) * 100);
 
-submit.addEventListener("click", () => {
+submit.addEventListener("click", (event) => {
+  event.preventDefault();
   if (round === 1) {
     player1Value = input.value;
     if (number1 > player1Value) {

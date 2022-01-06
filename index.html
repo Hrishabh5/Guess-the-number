@@ -9,13 +9,22 @@
   </head>
   <body>
     <div>
-      <p class="heading">Guess The Number</p>
+      <div class="header">
+        <p class="heading">Guess The Number</p>
+      </div>
+
+      <!-- <div class="details"> -->
       <p id="player1Result"></p>
       <p id="player2Result"></p>
       <p id="finalResult"></p>
       <p id="player"></p>
-      <input type="number" id="input" />
-      <button id="submit">Submit</button>
+      <!-- </div> -->
+
+      <form class="form" action="submit">
+        <input type="number" id="input" />
+        <button id="submit">Submit</button>
+      </form>
+
       <div class="result">
         <p id="start"></p>
         <p id="para"></p>
